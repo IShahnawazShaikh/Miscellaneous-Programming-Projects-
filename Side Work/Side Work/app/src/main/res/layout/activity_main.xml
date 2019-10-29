@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:weightSum="8">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_weight="4">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_weight="4">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Login As Head Manager"
+            android:textSize="14dp"
+            android:background="@drawable/button"
+            android:id="@+id/HeadManager"
+            android:textColor="#fff"
+            android:layout_centerHorizontal="true"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:fontFamily="@font/comfortaa_light"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Login As Service man"
+            android:textSize="14dp"
+            android:background="@drawable/button"
+            android:id="@+id/ServiceMan"
+            android:textColor="#fff"
+            android:layout_centerHorizontal="true"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/comfortaa_light"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

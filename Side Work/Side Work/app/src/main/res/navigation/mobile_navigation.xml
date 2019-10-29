@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_list">
+
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="com.example.oasisNav.ui.add_person.Add_PersonFragment"
+        android:label="@string/menu_addd"
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/nav_delete"
+        android:name="com.example.oasisNav.ui.delete.DeleteFragment"
+        android:label="@string/menu_delete"
+        tools:layout="@layout/fragment_delete" />
+
+    <fragment
+        android:id="@+id/nav_list"
+        android:name="com.example.oasisNav.ui.list.ListhowFragment"
+        android:label="@string/menu_list"
+        tools:layout="@layout/fragment_list" />
+
+    <fragment
+        android:id="@+id/nav_service"
+        android:name="com.example.oasisNav.ui.services.ServicesFragment"
+        android:label="@string/menu_services"
+        tools:layout="@layout/fragment_services" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.oasisNav.ui.logout.LogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_logout" />
+
+
+</navigation>

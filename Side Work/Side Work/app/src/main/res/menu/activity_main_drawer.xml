@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/navDrawer">
+        <item
+            android:id="@+id/nav_add"
+            android:icon="@drawable/add_person_foreground"
+            android:title="@string/menu_addd" />
+        <item
+            android:id="@+id/nav_delete"
+            android:icon="@drawable/delete_person_foreground"
+            android:title="@string/menu_delete" />
+        <item
+            android:id="@+id/nav_list"
+            android:icon="@drawable/list_foreground"
+            android:title="@string/menu_list"
+            />
+        <item
+            android:id="@+id/nav_service"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_services" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout_foreground"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>
