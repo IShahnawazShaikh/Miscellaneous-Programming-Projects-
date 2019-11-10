@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+<div id="main">
+  <div id="SignInBox" style="display: none;">
+  	<img src="LOGO.png">
+    <input type="email" placeholder="email" id="email">
+    <input type="password" placeholder="password" id="password">
+    <button id="signIn" onclick="signIn();">Login</button>
+  </div>
+ 
+  <div id="DashBoardSection" style="display: none;">
+  	 <div id="adminPart">
+  	 </div>
+    <div id="dataPart">
+      <div id="contentPart">
+      	  <div class="container-fluid">
+      	  	  <div class="row">
+      	  	  	 <div class="col-md-3">
+      	  	  	 	 
+      	  	  	 	 <div id="contentBox">
+      	  	  	 	 	 <button class="button" value="auth" id="auth1">Authenticate Admin</button>
+      	  	  	 	 </div>
+      	  	  	 </div>
+      	  	  	 <div class="col-md-3">
+      	  	  	 	
+      	  	  	 	 <div id="contentBox">
+      	  	  	 	 	 <button class="button" value="rg" id="rg1">Register Guard</button>
+      	  	  	 	 </div>
+      	  	  	 </div>
+      	  	  	 <div class="col-md-3">
+      	  	  	 	
+      	  	  	 	 <div id="contentBox">
+      	  	  	 	 	 <button class="button" value="rs" id="rs1">Register Student</button>
+      	  	  	 	 </div>
+      	  	  	 </div>
+      	  	  	 <div class="col-md-3">
+      	  	  	 	
+      	  	  	 	 <div id="contentBox">
+      	  	  	 	 	 <button class="button" value="view" id="view1">View Student</button>
+      	  	  	 	 </div>
+      	  	  	 </div>
+      	  	  </div>
+      	  </div>
+      </div>
+      <div id="formPart">
+      	 <!-- <div id="collgeStudents">
+             <p>college students</p> 
+         </div> -->
+      	  <div id="authenticate" style="display: none;">
+      	  	   <input type="email" id="authEmail" placeholder="email" required="required">
+      	  	   <input type="password" id="authPassword" placeholder="password" required="required">
+      	  	   <button id="authSignUp" onclick="signUp()">Sign Up</button>
+
+               <div id="detailBox" style="display: none;">
+               <p>Upload Your Details:</p>
+               <input type="name" name="name" id="name" placeholder="Display Name" required="required">
+               <input type="file" id="fileButton" required="required">
+               <span>Profile Uploaded (%) <p id="progress"></p></span>
+               <button id="setInfo">Update</button>
+              </div>
+      	  </div>
+      	   <div id="Rguards" style="display: none;">
+      	  	  <p>Register Guard</p>
+              <input type="name" name="Fname" placeholder="First Name" id="GFname" required="required">
+              <input type="name" name="Lname" placeholder="Last Name" id="GLname" required="required">
+              <input type="name" name="ID" placeholder="JMI ID" id="GId" required="required">
+              <input type="email" name="email" placeholder="email" id="GEmail" required="required">
+              <input type="number" name="number" placeholder="number" id="GNumber" required="required">
+              <input type="text" id="GPassword" placeholder="Password">
+              <button onclick="writeGuard();"> Register </button>
+      	  </div>
+      	   <div id="Rstudents" style="display: none;">
+      	  	  <p>Registered Students</p>
+                 <input type="name" name="Fname" placeholder="First Name" id="SFname" required="required">
+                 <input type="name" name="Lname" placeholder="Last Name" id="SLname" required="required">
+                 <input type="name" name="ID" placeholder="JMI ID" id="SId" required="required">
+              <input type="email" name="email" placeholder="email" id="SEmail" required="required">            
+              <input type="number" name="number" placeholder="number" id="SNumber" required="required">
+              <input type="text" name="number" placeholder="Course" id="SCourse" required="required">
+              <input type="text" name="Faculty" placeholder="Faculty" id="SFaculty" required="required">
+              <input placeholder="card issue Date" id="SIsueDate" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+             <input placeholder="card Expire Date" id="SExpireDate" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
+              <input type="file" id="fileButton2">
+              <span>Profile Uploaded (%) <p id="progress2"></p></span>
+               <label><br></label>
+              <button onclick="writeStudent()"> Register </button>
+      	  </div>
+      	   <div id="viewDetails" style="display: none;">
+      	  	  <p>Students Details</p>
+              <div class="studentIDs"></div>
+              <div class="studentData"></div>
+      	  </div>
+      </div>
+  	</div>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyAb-1Hgc374TLjp1qT5ECODtKriTtp7GwU",
+    authDomain: "jm-identity.firebaseapp.com",
+    databaseURL: "https://jm-identity.firebaseio.com",
+    projectId: "jm-identity",
+    storageBucket: "jm-identity.appspot.com",
+    messagingSenderId: "488312633857"
+  };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="letsStart2.js"></script>
+</body>
+</html>
+
+ 
